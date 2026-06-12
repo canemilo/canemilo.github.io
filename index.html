@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Garrido - Portfolio</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Animaciones base */
@@ -32,14 +30,14 @@
 </head>
 <body class="bg-slate-900 text-slate-50 font-sans antialiased selection:bg-sky-500/30">
 
-    <!-- NAVBAR (Sticky & Glassmorphism) -->
     <nav class="fixed w-full top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800 transition-all duration-300">
         <div class="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
             <div class="font-bold text-xl tracking-tighter flex items-center gap-2">
-                <i class="fas fa-terminal text-sky-400"></i>
+                <i class="fas fa-shield-halved text-sky-400"></i>
                 <span>Daniel<span class="text-sky-400">.dev</span></span>
             </div>
             <div class="hidden sm:flex gap-6 text-sm font-medium text-slate-400">
+                <a href="#filosofia" class="hover:text-sky-400 transition-colors">Filosofía</a>
                 <a href="#proyectos" class="hover:text-sky-400 transition-colors">Proyectos</a>
                 <a href="#habilidades" class="hover:text-sky-400 transition-colors">Habilidades</a>
             </div>
@@ -51,16 +49,13 @@
 
     <main class="pt-28 pb-20">
         
-        <!-- SECCIÓN HERO -->
-        <section class="max-w-5xl mx-auto px-6 pt-12 pb-24 flex flex-col md:flex-row items-center gap-12 fade-in-up">
+        <section class="max-w-5xl mx-auto px-6 pt-12 pb-20 flex flex-col md:flex-row items-center gap-12 fade-in-up">
             
-            <!-- Avatar con efecto de brillo -->
             <div class="relative group shrink-0">
                 <div class="absolute -inset-1 bg-gradient-to-r from-sky-500 to-indigo-500 rounded-full blur opacity-25 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
                 <img src="https://ui-avatars.com/api/?name=Daniel+Garrido&background=0f172a&color=38bdf8&size=200" alt="Daniel Garrido" class="relative w-40 h-40 md:w-56 md:h-56 rounded-full object-cover border-4 border-slate-800">
             </div>
 
-            <!-- Información -->
             <div class="flex-1 text-center md:text-left">
                 <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
                     Hola, soy <br class="hidden md:block" />
@@ -69,13 +64,12 @@
                     </span>
                 </h1>
                 <h2 class="text-xl md:text-2xl text-slate-400 font-medium mb-6">
-                    Desarrollador de Software
+                    Especialista Backend & Entusiasta de la Ciberseguridad
                 </h2>
                 <p class="text-slate-300 leading-relaxed mb-8 max-w-2xl text-lg">
-                    Soy un desarrollador apasionado por crear soluciones tecnológicas innovadoras. Me encanta aprender nuevas tecnologías, resolver problemas complejos y desarrollar código limpio y eficiente.
+                    Construyo software asumiendo la propiedad total del proyecto. Mi hábitat natural es el diseño de APIs robustas, la arquitectura limpia y la protección de datos, pero salto al frontend sin miedo para asegurar que la experiencia completa sea impecable.
                 </p>
 
-                <!-- Botones Sociales -->
                 <div class="flex items-center justify-center md:justify-start gap-4">
                     <a href="https://github.com/canemilo" target="_blank" class="w-12 h-12 rounded-full bg-slate-800 flex items-center justify-center text-slate-300 hover:bg-slate-700 hover:text-white transition-all hover:scale-110">
                         <i class="fab fa-github text-xl"></i>
@@ -87,133 +81,147 @@
             </div>
         </section>
 
-        <!-- SECCIÓN DE PROYECTOS -->
+        <section id="filosofia" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-800/50 fade-in-up">
+            <h2 class="text-3xl font-bold mb-10"><span class="text-sky-400">#</span> Mi Manifiesto Técnico</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <i class="fas fa-server text-3xl text-sky-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Backend & Clean Architecture</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Defiendo a capa y espada que el controlador no toca la base de datos y que las reglas de negocio son sagradas. Aplico principios SOLID y patrones de diseño para que el backend escale sin colapsar.</p>
+                </div>
+                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <i class="fas fa-user-shield text-3xl text-indigo-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Security by Design</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">La seguridad no es un parche que se pone al final. Implemento auditorías rotativas, validaciones perimetrales (Zod), JWT seguros, 2FA y criptografía desde el primer commit del proyecto.</p>
+                </div>
+                <div class="bg-slate-800/30 p-6 rounded-xl border border-slate-700/50">
+                    <i class="fas fa-layer-group text-3xl text-blue-400 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Ownership Total</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Me apropio de mis proyectos. Si la lógica del servidor es de hierro, el cliente no puede ser de cristal. Me ajusto al Frontend (React) cuando es necesario para cerrar el ciclo de vida del desarrollo con excelencia.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="proyectos" class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-800/50">
             <div class="flex items-center gap-4 mb-12 fade-in-up">
                 <div class="p-3 bg-sky-500/10 rounded-lg">
                     <i class="fas fa-code text-2xl text-sky-400"></i>
                 </div>
-                <h2 class="text-3xl font-bold">Proyectos</h2>
+                <h2 class="text-3xl font-bold">Proyectos Destacados</h2>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- 🌟 PROYECTO ESTRELLA: DathU (Ocupa todo el ancho) -->
-                <a href="https://github.com/canemilo" target="_blank" class="block col-span-1 md:col-span-2 lg:col-span-3 bg-gradient-to-br from-slate-800/80 to-slate-900 border border-sky-500/40 rounded-2xl p-8 card-hover fade-in-up relative overflow-hidden group shadow-[0_0_30px_rgba(14,165,233,0.1)]" style="transition-delay: 50ms;">
-                    <!-- Decoración de luz de fondo -->
+                <a href="https://github.com/canemilo" target="_blank" class="block col-span-1 md:col-span-2 lg:col-span-3 bg-gradient-to-br from-slate-800/80 to-slate-900 border border-sky-500/40 rounded-2xl p-8 card-hover fade-in-up relative overflow-hidden group shadow-[0_0_30px_rgba(14,165,233,0.1)]">
                     <div class="absolute -right-20 -top-20 w-64 h-64 bg-sky-500/10 rounded-full blur-3xl group-hover:bg-sky-500/20 transition-all duration-500"></div>
 
                     <div class="flex justify-between items-start mb-4 relative z-10">
                         <div class="flex items-center gap-3">
                             <i class="fas fa-star text-3xl text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.5)]"></i>
-                            <span class="text-sky-400 font-bold tracking-widest uppercase text-xs">Proyecto Principal</span>
+                            <span class="text-sky-400 font-bold tracking-widest uppercase text-xs">Desarrollo End-to-End</span>
                         </div>
                         <i class="fas fa-external-link-alt text-slate-500 group-hover:text-sky-400 transition-colors"></i>
                     </div>
 
-                    <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4 relative z-10">DathU</h3>
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-4 relative z-10">DathU (ClinicOS)</h3>
                     <p class="text-slate-300 text-base md:text-lg mb-8 max-w-4xl relative z-10 leading-relaxed">
-                        Motor de Analítica Avanzada y Sistema de Gestión Clínica de alto rendimiento estructurado como Monorepo. Un ecosistema complejo que gestiona agendas dinámicas, flujos de triaje en tiempo real (100% WebSockets), validaciones estrictas con Zod entre fronteras y un manejo de historiales clínicos priorizando la privacidad absoluta mediante criptografía.
+                        Sistema HealthTech de grado empresarial. He asumido el ownership completo: desde un backend blindado con validaciones estrictas (Zod) y auditorías legales (Winston/Morgan), hasta la seguridad por doble factor (Speakeasy) y sincronización de clínicas en tiempo real vía WebSockets. Frontend resiliente diseñado en React.
                     </p>
 
                     <div class="mt-auto flex flex-wrap items-center gap-2 relative z-10">
+                        <span class="px-3 py-1.5 bg-green-500/20 text-green-300 text-xs font-bold rounded-md border border-green-500/30">Node.js (Express)</span>
+                        <span class="px-3 py-1.5 bg-purple-500/20 text-purple-300 text-xs font-bold rounded-md border border-purple-500/30">Seguridad & JWT</span>
                         <span class="px-3 py-1.5 bg-sky-500/20 text-sky-300 text-xs font-bold rounded-md border border-sky-500/30">TypeScript</span>
                         <span class="px-3 py-1.5 bg-blue-500/20 text-blue-300 text-xs font-bold rounded-md border border-blue-500/30">React</span>
-                        <span class="px-3 py-1.5 bg-green-500/20 text-green-300 text-xs font-bold rounded-md border border-green-500/30">Node.js</span>
-                        <span class="px-3 py-1.5 bg-purple-500/20 text-purple-300 text-xs font-bold rounded-md border border-purple-500/30">WebSockets</span>
-                        <span class="px-3 py-1.5 bg-indigo-500/20 text-indigo-300 text-xs font-bold rounded-md border border-indigo-500/30">Zod</span>
                         <span class="px-3 py-1.5 bg-slate-700/50 text-slate-300 text-xs font-bold rounded-md border border-slate-600">Clean Architecture</span>
                     </div>
                 </a>
 
-                <!-- Proyecto 1 -->
                 <a href="https://github.com/canemilo" target="_blank" class="block h-full bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 card-hover fade-in-up" style="transition-delay: 150ms;">
                     <div class="flex justify-between items-start mb-4">
-                        <i class="fas fa-book-open text-2xl text-sky-400 opacity-80"></i>
+                        <i class="fas fa-robot text-2xl text-sky-400 opacity-80"></i>
                         <i class="fas fa-external-link-alt text-slate-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-100 mb-2">WebPilot</h3>
-                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Plataforma completa para crear, probar y ejecutar automatizaciones web de manera fácil y eficiente.</p>
+                    <h3 class="text-xl font-bold text-slate-100 mb-2">WebPilot Automations</h3>
+                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Plataforma integral para el diseño y ejecución de flujos de automatización web. Arquitectura orientada a optimizar tareas repetitivas garantizando alta fiabilidad y tolerancia a fallos.</p>
                     <div class="mt-auto flex items-center gap-2">
                         <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
                         <span class="text-sm text-slate-300 font-medium">TypeScript</span>
                     </div>
                 </a>
 
-                <!-- Proyecto 3 -->
                 <a href="https://github.com/canemilo" target="_blank" class="block h-full bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 card-hover fade-in-up" style="transition-delay: 300ms;">
                     <div class="flex justify-between items-start mb-4">
-                        <i class="fas fa-book-open text-2xl text-sky-400 opacity-80"></i>
+                        <i class="fas fa-file-invoice-dollar text-2xl text-sky-400 opacity-80"></i>
                         <i class="fas fa-external-link-alt text-slate-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-100 mb-2">proy_gestor</h3>
-                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Sistema diseñado para automatizar la gestión y el procesamiento de facturas de forma integral.</p>
+                    <h3 class="text-xl font-bold text-slate-100 mb-2">InvoiceFlow ERP</h3>
+                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Motor backend robusto diseñado para la automatización financiera. Procesamiento masivo de datos, validación estricta de transacciones y arquitectura modular.</p>
                     <div class="mt-auto flex items-center gap-2">
                         <span class="w-2.5 h-2.5 rounded-full bg-red-500"></span>
-                        <span class="text-sm text-slate-300 font-medium">Java</span>
+                        <span class="text-sm text-slate-300 font-medium">Java / SQL</span>
                     </div>
                 </a>
 
-                <!-- Proyecto 4 -->
                 <a href="https://github.com/canemilo" target="_blank" class="block h-full bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 card-hover fade-in-up" style="transition-delay: 400ms;">
                     <div class="flex justify-between items-start mb-4">
-                        <i class="fas fa-book-open text-2xl text-sky-400 opacity-80"></i>
+                        <i class="fas fa-project-diagram text-2xl text-sky-400 opacity-80"></i>
                         <i class="fas fa-external-link-alt text-slate-500"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-slate-100 mb-2">BOE-contract-bot</h3>
-                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Bot automatizado para la descarga de documentación y extracción de tipos de contratos del BOE.</p>
+                    <h3 class="text-xl font-bold text-slate-100 mb-2">BOE Data Pipeline</h3>
+                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Pipeline ETL automatizado para la extracción y parseo seguro de licitaciones públicas. Estructura datos no tabulares gubernamentales para su posterior análisis.</p>
                     <div class="mt-auto flex items-center gap-2">
                         <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
                         <span class="text-sm text-slate-300 font-medium">Python</span>
                     </div>
                 </a>
 
-                <!-- Proyecto 5 -->
-                <a href="https://github.com/canemilo" target="_blank" class="block h-full bg-slate-800/40 border border-slate-700/50 rounded-2xl p-6 card-hover fade-in-up" style="transition-delay: 550ms;">
-                    <div class="flex justify-between items-start mb-4">
-                        <i class="fas fa-book-open text-2xl text-sky-400 opacity-80"></i>
-                        <i class="fas fa-external-link-alt text-slate-500"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-slate-100 mb-2">Legaltech</h3>
-                    <p class="text-slate-400 text-sm mb-6 line-clamp-3">Herramienta orientada al sector legal para la gestión y clasificación inteligente de contratos.</p>
-                    <div class="mt-auto flex items-center gap-2">
-                        <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
-                        <span class="text-sm text-slate-300 font-medium">JavaScript</span>
-                    </div>
-                </a>
-
             </div>
         </section>
 
-        <!-- SECCIÓN DE HABILIDADES -->
         <section id="habilidades" class="max-w-5xl mx-auto px-6 py-20 border-t border-slate-800/50 fade-in-up">
             <div class="flex items-center gap-4 mb-10">
                 <div class="p-3 bg-sky-500/10 rounded-lg">
-                    <i class="fas fa-layer-group text-2xl text-sky-400"></i>
+                    <i class="fas fa-terminal text-2xl text-sky-400"></i>
                 </div>
-                <h2 class="text-3xl font-bold">Habilidades Técnicas</h2>
+                <h2 class="text-3xl font-bold">Stack & Prácticas</h2>
             </div>
             
-            <div class="flex flex-wrap gap-3">
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">Java</span>
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">TypeScript</span>
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">JavaScript</span>
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">Python</span>
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">React</span>
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">Node.js</span>
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">SQL</span>
-                <span class="px-5 py-2.5 bg-slate-800 text-slate-300 rounded-lg border border-slate-700 hover:border-sky-500/50 hover:bg-slate-800/80 transition-colors cursor-default">Git</span>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-sky-400 font-bold mb-4 text-sm uppercase tracking-wider">Backend & Ciberseguridad</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Node.js / Express</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Java</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Python</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">MongoDB / SQL</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">JWT & Auth (2FA)</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Helmet & Rate Limiting</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Zod Validation</span>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-indigo-400 font-bold mb-4 text-sm uppercase tracking-wider">Arquitectura & Frontend</h4>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Clean Architecture</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Principios SOLID</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">React.js</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">TypeScript</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Tailwind CSS</span>
+                        <span class="px-4 py-2 bg-slate-800 text-slate-300 rounded-md border border-slate-700">Git Flow</span>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- FOOTER -->
     <footer class="border-t border-slate-800 bg-slate-900/50 py-10 text-center text-slate-500">
-        <p>&copy; 2024 Daniel Garrido. Todos los derechos reservados.</p>
+        <p>&copy; 2024 Daniel Garrido. Construido con rigor técnico.</p>
     </footer>
 
-    <!-- SCRIPT PARA ANIMACIONES AL HACER SCROLL -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const observer = new IntersectionObserver((entries) => {
